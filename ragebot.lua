@@ -157,7 +157,7 @@ pcall(function()
 	end	
 end)
 
-local DeleteMobLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/syntest123/syntest123/main/Lib1.lu"))();
+local DeleteMobLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/syntest123/syntest123/main/Lib1.lua"))();
 local Window = DeleteMobLib:CreateWindow(Enum.KeyCode.RightShift, "DeleteMob");
 local UIToggle = Window:CreateToggleButton()
 
