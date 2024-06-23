@@ -1450,8 +1450,8 @@ else
 
 	local SettingsTab = Window:CreateTab("Settings");
 	local SettingsInfoSector = SettingsTab:CreateSector("Info", "Left");
-	SettingsInfoSector:CreateCoppyText("Made By m1ckgordon");
-	SettingsInfoSector:CreateCoppyText("https://discord.gg/jNRKdtH3 - Click Me");
+	SettingsInfoSector:CreateCoppyText("Made By Liam");
+	SettingsInfoSector:CreateCoppyText("https://discord.gg/YedBXBG5f4 - Click Me");
 
 	SettingsTab:CreateConfig("Right");
 
