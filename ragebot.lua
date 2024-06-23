@@ -157,7 +157,7 @@ pcall(function()
 	end	
 end)
 
-local DeleteMobLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Mick-gordon/Hyper-Escape/main/DeleteMob%20GUI.lua"))();
+local DeleteMobLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/syntest123/syntest123/main/Lib1.lu"))();
 local Window = DeleteMobLib:CreateWindow(Enum.KeyCode.RightShift, "DeleteMob");
 local UIToggle = Window:CreateToggleButton()
 
