@@ -122,7 +122,7 @@ else
 		function library:CreateWindow(Keybind, Name)
 			local window = { };
 			window.keybind = Keybind or Enum.KeyCode.RightShift;
-			window.name = Name or "pf.lol";
+			window.name = Name or "DeleteMob";
 
 			window.ScreenGui = Instance.new("ScreenGui");
 			window.ScreenGui.Parent = (CoreGui or StarterGUI);
