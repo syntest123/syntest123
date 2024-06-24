@@ -246,8 +246,8 @@ GunChamsSection:CreateSlider("Reflection", 1, 1, 50, 1, function(HjggOF) HyperEs
 
 local SettingsTab = Window:CreateTab("Settings");
 local SettingsInfoSector = SettingsTab:CreateSector("Info", "Left");
-SettingsInfoSector:CreateCoppyText("Made By Liam");
-SettingsInfoSector:CreateCoppyText("https://discord.gg/b6aBJbm6fN - Click Me");
+SettingsInfoSector:CreateCoppyText("Made By m1ckgordon");
+SettingsInfoSector:CreateCoppyText("https://discord.gg/jNRKdtH3 - Click Me");
 
 SettingsTab:CreateConfig("Right");
 
