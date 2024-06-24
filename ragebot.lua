@@ -1,152 +1,153 @@
+
 local function GetGunBulletPen(Gun)
-	local PenetrationDepth = {[`AK12`]=1.00,[`AN-94`]=1.00,[`REMINGTON700`]=3.00,[`ASVAL`]=1.00,[`SCAR-L`]=1.00,[`AUGA1`]=1.00,[`M16A4`]=1.10,[`G36`]=1.30,[`M16A1`]=0.80,[`M16A3`]=1.10,[`TYPE20`]=1.40,[`AUGA2`]=1.00,[`K2`]=1.00,[`FAMASF1`]=1.00,[`AK47`]=1.40,[`AKM`]=1.40,[`AK103`]=1.40,[`TAR-21`]=1.20,[`TYPE88`]=0.90,[`M231`]=1.00,[`C7A2`]=0.90,[`STG-44`]=1.60,[`G11K2`]=2.00,[`M14`]=1.80,[`BEOWULFECR`]=1.90,[`SCAR-H`]=1.50,[`AK12BR`]=2.00,[`G3A3`]=1.50,[`AG-3`]=2.00,[`HK417`]=1.60,[`HENRY45-70`]=2.00,[`FAL50.00`]=2.00,[`HCAR`]=2.20,[`M4A1`]=1.00,[`G36K`]=1.10,[`M4`]=1.00,[`L22`]=0.90,[`SCARPDW`]=0.90,[`AKU12`]=1.00,[`GROZA-1`]=1.50,[`OTS-126`]=1.20,[`AK12C`]=1.20,[`HONEYBADGER`]=1.30,[`K1A`]=0.75,[`SR-3M`]=1.00,[`GROZA-4`]=1.50,[`MC51`]=1.50,[`FAL50.63PARA`]=2.00,[`1858CARBINE`]=0.50,[`AK105`]=1.00,[`JURY`]=1.00,[`KACSRR`]=1.00,[`GYROJETCARBINE`]=0.70,[`C8A2`]=0.80,[`X95R`]=1.00,[`HK51B`]=1.90,[`CANCANNON`]=1.20,[`KSG12`]=0.40,[`MODEL870`]=0.50,[`DBV12`]=0.50,[`KS-23M`]=0.70,[`SAIGA-12`]=0.50,[`STEVENSDB`]=0.50,[`E-GUN`]=0.50,[`AA-12`]=0.30,[`SPAS-12`]=0.60,[`DT11`]=0.70,[`USAS-12`]=0.30,[`MK11`]=1.70,[`SKS`]=1.50,[`SL-8`]=1.30,[`DRAGUNOVSVU`]=2.80,[`VSSVINTOREZ`]=1.50,[`MSG90`]=2.00,[`M21`]=2.40,[`BEOWULFTCR`]=3.00,[`SA58SPR`]=2.00,[`SCARSSR`]=2.60,[`COLTLMG`]=1.40,[`M60`]=2.20,[`AUGHBAR`]=1.60,[`MG36`]=1.80,[`RPK12`]=1.60,[`L86LSW`]=1.60,[`RPK`]=1.60,[`HK21E`]=1.60,[`HAMRIAR`]=1.40,[`RPK74`]=1.20,[`MG3KWS`]=1.80,[`M1918A2`]=2.20,[`MGV-176`]=0.50,[`STONER96`]=1.20,[`CHAINSAW`]=1.20,[`MG42`]=2.00,[`INTERVENTION`]=4.00,[`MODEL700`]=3.00,[`AWS`]=2.00,[`BFG50`]=10.00,[`AWM`]=3.00,[`TRG-42`]=3.00,[`MOSINNAGANT`]=3.50,[`DRAGUNOVSVDS`]=3.20,[`M1903`]=3.80,[`K14`]=3.00,[`HECATEII`]=10.00,[`FT300`]=3.00,[`M107`]=5.00,[`STEYRSCOUT`]=3.00,[`WA2000`]=2.80,[`NTW-20`]=20.00,[`M9`]=0.50,[`G17`]=0.50,[`M1911A1`]=0.50,[`M17`]=0.50,[`DESERTEAGLEL5`]=1.00,[`G21`]=0.50,[`G23`]=0.60,[`M45A1`]=0.50,[`G40`]=0.80,[`KG-99`]=0.50,[`G50`]=1.00,[`FIVESEVEN`]=1.20,[`ZIP22`]=0.50,[`GIM1`]=1.00,[`HARDBALLER`]=0.80,[`IZHEVSKPB`]=0.50,[`MAKAROVPM`]=0.50,[`GB-22`]=0.50,[`DESERTEAGLEXIX`]=1.30,[`AUTOMAGIII`]=1.20,[`GYROJETMARKI`]=0.50,[`GSP`]=0.10,[`GRIZZLY`]=1.30,[`M2011`]=0.50,[`ALIEN`]=0.50,[`AF2011-A1`]=0.50,[`G18C`]=0.50,[`93R`]=0.50,[`PP-2000`]=1.00,[`TEC-9`]=0.50,[`MICROUZI`]=0.50,[`ŠKORPIONVZ.61`]=0.50,[`ASMI`]=0.50,[`MP1911`]=0.50,[`ARMPISTOL`]=0.90,[`MP412REX`]=0.50,[`MATEBA6`]=1.00,[`1858NEWARMY`]=0.50,[`REDHAWK44`]=1.00,[`JUDGE`]=1.00,[`EXECUTIONER`]=1.00,[`SUPERSHORTY`]=0.60,[`SFG50`]=10.00,[`M79THUMPER`]=0.50,[`COILGUN`]=0.50,[`SAWEDOFF`]=0.60,[`SAIGA-12U`]=0.40,[`OBREZ`]=2.00,[`SASS308`]=2.00,[`GLOCK17`]=0.50};
+	local PenetrationDepth = {["AK12"]=1.00,["AN-94"]=1.00,["REMINGTON700"]=3.00,["ASVAL"]=1.00,["SCAR-L"]=1.00,["AUGA1"]=1.00,["M16A4"]=1.10,["G36"]=1.30,["M16A1"]=0.80,["M16A3"]=1.10,["TYPE20"]=1.40,["AUGA2"]=1.00,["K2"]=1.00,["FAMASF1"]=1.00,["AK47"]=1.40,["AKM"]=1.40,["AK103"]=1.40,["TAR-21"]=1.20,["TYPE88"]=0.90,["M231"]=1.00,["C7A2"]=0.90,["STG-44"]=1.60,["G11K2"]=2.00,["M14"]=1.80,["BEOWULFECR"]=1.90,["SCAR-H"]=1.50,["AK12BR"]=2.00,["G3A3"]=1.50,["AG-3"]=2.00,["HK417"]=1.60,["HENRY45-70"]=2.00,["FAL50.00"]=2.00,["HCAR"]=2.20,["M4A1"]=1.00,["G36K"]=1.10,["M4"]=1.00,["L22"]=0.90,["SCARPDW"]=0.90,["AKU12"]=1.00,["GROZA-1"]=1.50,["OTS-126"]=1.20,["AK12C"]=1.20,["HONEYBADGER"]=1.30,["K1A"]=0.75,["SR-3M"]=1.00,["GROZA-4"]=1.50,["MC51"]=1.50,["FAL50.63PARA"]=2.00,["1858CARBINE"]=0.50,["AK105"]=1.00,["JURY"]=1.00,["KACSRR"]=1.00,["GYROJETCARBINE"]=0.70,["C8A2"]=0.80,["X95R"]=1.00,["HK51B"]=1.90,["CANCANNON"]=1.20,["KSG12"]=0.40,["MODEL870"]=0.50,["DBV12"]=0.50,["KS-23M"]=0.70,["SAIGA-12"]=0.50,["STEVENSDB"]=0.50,["E-GUN"]=0.50,["AA-12"]=0.30,["SPAS-12"]=0.60,["DT11"]=0.70,["USAS-12"]=0.30,["MK11"]=1.70,["SKS"]=1.50,["SL-8"]=1.30,["DRAGUNOVSVU"]=2.80,["VSSVINTOREZ"]=1.50,["MSG90"]=2.00,["M21"]=2.40,["BEOWULFTCR"]=3.00,["SA58SPR"]=2.00,["SCARSSR"]=2.60,["COLTLMG"]=1.40,["M60"]=2.20,["AUGHBAR"]=1.60,["MG36"]=1.80,["RPK12"]=1.60,["L86LSW"]=1.60,["RPK"]=1.60,["HK21E"]=1.60,["HAMRIAR"]=1.40,["RPK74"]=1.20,["MG3KWS"]=1.80,["M1918A2"]=2.20,["MGV-176"]=0.50,["STONER96"]=1.20,["CHAINSAW"]=1.20,["MG42"]=2.00,["INTERVENTION"]=4.00,["MODEL700"]=3.00,["AWS"]=2.00,["BFG50"]=10.00,["AWM"]=3.00,["TRG-42"]=3.00,["MOSINNAGANT"]=3.50,["DRAGUNOVSVDS"]=3.20,["M1903"]=3.80,["K14"]=3.00,["HECATEII"]=10.00,["FT300"]=3.00,["M107"]=5.00,["STEYRSCOUT"]=3.00,["WA2000"]=2.80,["NTW-20"]=20.00,["M9"]=0.50,["G17"]=0.50,["M1911A1"]=0.50,["M17"]=0.50,["DESERTEAGLEL5"]=1.00,["G21"]=0.50,["G23"]=0.60,["M45A1"]=0.50,["G40"]=0.80,["KG-99"]=0.50,["G50"]=1.00,["FIVESEVEN"]=1.20,["ZIP22"]=0.50,["GIM1"]=1.00,["HARDBALLER"]=0.80,["IZHEVSKPB"]=0.50,["MAKAROVPM"]=0.50,["GB-22"]=0.50,["DESERTEAGLEXIX"]=1.30,["AUTOMAGIII"]=1.20,["GYROJETMARKI"]=0.50,["GSP"]=0.10,["GRIZZLY"]=1.30,["M2011"]=0.50,["ALIEN"]=0.50,["AF2011-A1"]=0.50,["G18C"]=0.50,["93R"]=0.50,["PP-2000"]=1.00,["TEC-9"]=0.50,["MICROUZI"]=0.50,["ŠKORPIONVZ.61"]=0.50,["ASMI"]=0.50,["MP1911"]=0.50,["ARMPISTOL"]=0.90,["MP412REX"]=0.50,["MATEBA6"]=1.00,["1858NEWARMY"]=0.50,["REDHAWK44"]=1.00,["JUDGE"]=1.00,["EXECUTIONER"]=1.00,["SUPERSHORTY"]=0.60,["SFG50"]=10.00,["M79THUMPER"]=0.50,["COILGUN"]=0.50,["SAWEDOFF"]=0.60,["SAIGA-12U"]=0.40,["OBREZ"]=2.00,["SASS308"]=2.00,["GLOCK17"]=0.50};
 	return PenetrationDepth[Gun];
 end
 
 local function GetgunVelos(Gun)
-	local Gunsvelso = {[`AK12`]=2950.00,[`REMINGTON700`]=2650,[`AN-94`]=2950.00 ,[`ASVAL`]=1500.00 ,[`SCAR-L`]=2300.00 ,[`AUGA1`]=3200.00 ,[`M16A4`]=2700.00 ,[`G36`]=2700.00 ,[`M16A1`]=3100.00 ,[`M16A3`]=2700.00 ,[`TYPE20`]=2625.00 ,[`AUGA2`]=3200.00 ,[`K2`]=2400.00 ,[`FAMASF1`]=3100.00 ,[`AK47`]=2350.00 ,[`AUGA3`]=3200.00,[`L85A2`]=2500.00,[`HK416`]=2500.00,[`AK74`]=2900.00,[`AKM`]=2350.00,[`AK103`]=2350.00,[`TAR-21`]=2800.00,[`TYPE88`]=2950.00,[`M231`]=2200.00,[`C7A2`]=2800.00,[`STG-44`]=2250.00,[`G11K2`]=3100.00,[`M14`]=2550.00,[`BEOWULFECR`]=1800.00,[`SCAR-H`]=2900.00,[`AK12BR`]=2700.00,[`G3A3`]=2600.00,[`AG-3`]=2600.00,[`HK417`]=2500.00,[`HENRY45-70`]=1800.00,[`FAL50.00`]=2750.00,[`HCAR`]=2500.00,[`M4A1`]=2200.00,[`G36K`]=2500.00,[`M4`]=2200.00,[`L22`]=2000.00,[`SCARPDW`]=2200.00,[`AKU12`]=2550.00,[`GROZA-1`]=2400.00,[`OTS-126`]=2300.00,[`AK12C`]=2150.00,[`HONEYBADGER`]=2000.00,[`K1A`]=1700.00,[`SR-3M`]=2000.00,[`GROZA-4`]=1200.00,[`MC51`]=2000.00,[`FAL50.63PARA`]=2200.00,[`1858CARBINE`]=1500.00,[`AK105`]=2800.00,[`JURY`]=1500.00,[`KACSRR`]=1500.00,[`GYROJETCARBINE`]=50.00,[`C8A2`]=2400.00,[`X95R`]=2200.00,[`HK51B`]=2200.00,[`CANCANNON`]=1000.00,[`KSG12`]=1500.00,[`MODEL870`]=1500.00,[`DBV12`]=1500.00,[`KS-23M`]=1500.00,[`SAIGA-12`]=1500.00,[`STEVENSDB`]=1600.00,[`E-GUN`]=950.00,[`AA-12`]=1500.00,[`SPAS-12`]=1500.00,[`DT11`]=2000.00,[`USAS-12`]=1300.00,[`MP5K`]=1200.00,[`UMP45`]=870.00,[`G36C`]=2300.00,[`MP7`]=2400.00,[`MAC10`]=920.00,[`P90`]=2350.00,[`COLTMARS`]=2600.00,[`MP5`]=1300.00,[`COLTSMG633`]=1300.00,[`L2A3`]=1280.00,[`MP5SD`]=1050.00,[`MP10`]=1300.00,[`M3A1`]=900.00,[`MP5/10`]=1400.00,[`UZI`]=1300.00,[`AUGA3PARAXS`]=1200.00,[`K7`]=1300.00,[`AKS74U`]=2400.00,[`PPSH-41`]=1600.00,[`FALPARASHORTY`]=2000.00,[`KRISSVECTOR`]=960.00,[`PP-19BIZON`]=1250.00,[`MP40`]=1310.00,[`X95SMG`]=1300.00,[`TOMMYGUN`]=935.00,[`RAMA1130`]=1300.00,[`BWC9A`]=1300.00,[`FIVE-0`]=1200.00,[`MK11`]=2800.00,[`SKS`]=2500.00,[`SL-8`]=2800.00,[`DRAGUNOVSVU`]=2700.00,[`VSSVINTOREZ`]=2000.00,[`MSG90`]=2800.00,[`M21`]=2650.00,[`BEOWULFTCR`]=1800.00,[`SA58SPR`]=2500.00,[`SCARSSR`]=3000.00,[`COLTLMG`]=2500.00,[`M60`]=2800.00,[`AUGHBAR`]=3300.00,[`MG36`]=2700.00,[`RPK12`]=3100.00,[`L86LSW`]=3100.00,[`RPK`]=2450.00,[`HK21E`]=2600.00,[`HAMRIAR`]=2600.00,[`RPK74`]=3150.00,[`MG3KWS`]=2700.00,[`M1918A2`]=2800.00,[`MGV-176`]=1550.00,[`STONER96`]=3000.00,[`CHAINSAW`]=3000.00,[`MG42`]=2400.00,[`INTERVENTION`]=3000.00,[`MODEL700`]=2650.00,[`AWS`]=2500.00,[`BFG50`]=3000.00,[`AWM`]=3000.00,[`TRG-42`]=3000.00,[`MOSINNAGANT`]=3000.00,[`DRAGUNOVSVDS`]=2650.00,[`M1903`]=3000.00,[`K14`]=2800.00,[`HECATEII`]=3000.00,[`FT300`]=2800.00,[`M107`]=2800.00,[`STEYRSCOUT`]=3000.00,[`WA2000`]=2850.00,[`NTW-20`]=2400.00,[`M9`]=1300.00,[`G17`]=1230.00,[`M1911A1`]=830.00,[`M17`]=1200.00,[`DESERTEAGLEL5`]=1700.00,[`G21`]=810.00,[`G23`]=1025.00,[`M45A1`]=830.00,[`G40`]=1350.00,[`KG-99`]=1500.00,[`G50`]=1250.00,[`FIVESEVEN`]=2500.00,[`ZIP22`]=1600.00,[`GIM1`]=875.00,[`HARDBALLER`]=1400.00,[`IZHEVSKPB`]=950.00,[`MAKAROVPM`]=1030.00,[`GB-22`]=1900.00,[`DESERTEAGLEXIX`]=1425.00,[`AUTOMAGIII`]=1700.00,[`GYROJETMARKI`]=25.00,[`GSP`]=1800.00,[`GRIZZLY`]=1500.00,[`M2011`]=1300.00,[`ALIEN`]=1300.00,[`AF2011-A1`]=1250.00,[`G18C`]=1230.00,[`93R`]=1200.00,[`PP-2000`]=2000.00,[`TEC-9`]=1180.00,[`MICROUZI`]=2000.00,[`ŠKORPIONVZ.61`]=1200.00,[`ASMI`]=1260.00,[`MP1911`]=830.00,[`ARMPISTOL`]=2300.00,[`MP412REX`]=1700.00,[`MATEBA6`]=1450.00,[`1858NEWARMY`]=1000.00,[`REDHAWK44`]=1600.00,[`JUDGE`]=2000.00,[`EXECUTIONER`]=2000.00,[`SUPERSHORTY`]=1400.00,[`SFG50`]=2000.00,[`M79THUMPER`]=900.00,[`COILGUN`]=950.00,[`SAWEDOFF`]=1300.00,[`SAIGA-12U`]=1400.00,[`OBREZ`]=1500.00,[`SASS308`]=3000.00,[`GLOCK17`]=1230.00};
+	local Gunsvelso = {["AK12"]=2950.00,["REMINGTON700"]=2650,["AN-94"]=2950.00 ,["ASVAL"]=1500.00 ,["SCAR-L"]=2300.00 ,["AUGA1"]=3200.00 ,["M16A4"]=2700.00 ,["G36"]=2700.00 ,["M16A1"]=3100.00 ,["M16A3"]=2700.00 ,["TYPE20"]=2625.00 ,["AUGA2"]=3200.00 ,["K2"]=2400.00 ,["FAMASF1"]=3100.00 ,["AK47"]=2350.00 ,["AUGA3"]=3200.00,["L85A2"]=2500.00,["HK416"]=2500.00,["AK74"]=2900.00,["AKM"]=2350.00,["AK103"]=2350.00,["TAR-21"]=2800.00,["TYPE88"]=2950.00,["M231"]=2200.00,["C7A2"]=2800.00,["STG-44"]=2250.00,["G11K2"]=3100.00,["M14"]=2550.00,["BEOWULFECR"]=1800.00,["SCAR-H"]=2900.00,["AK12BR"]=2700.00,["G3A3"]=2600.00,["AG-3"]=2600.00,["HK417"]=2500.00,["HENRY45-70"]=1800.00,["FAL50.00"]=2750.00,["HCAR"]=2500.00,["M4A1"]=2200.00,["G36K"]=2500.00,["M4"]=2200.00,["L22"]=2000.00,["SCARPDW"]=2200.00,["AKU12"]=2550.00,["GROZA-1"]=2400.00,["OTS-126"]=2300.00,["AK12C"]=2150.00,["HONEYBADGER"]=2000.00,["K1A"]=1700.00,["SR-3M"]=2000.00,["GROZA-4"]=1200.00,["MC51"]=2000.00,["FAL50.63PARA"]=2200.00,["1858CARBINE"]=1500.00,["AK105"]=2800.00,["JURY"]=1500.00,["KACSRR"]=1500.00,["GYROJETCARBINE"]=50.00,["C8A2"]=2400.00,["X95R"]=2200.00,["HK51B"]=2200.00,["CANCANNON"]=1000.00,["KSG12"]=1500.00,["MODEL870"]=1500.00,["DBV12"]=1500.00,["KS-23M"]=1500.00,["SAIGA-12"]=1500.00,["STEVENSDB"]=1600.00,["E-GUN"]=950.00,["AA-12"]=1500.00,["SPAS-12"]=1500.00,["DT11"]=2000.00,["USAS-12"]=1300.00,["MP5K"]=1200.00,["UMP45"]=870.00,["G36C"]=2300.00,["MP7"]=2400.00,["MAC10"]=920.00,["P90"]=2350.00,["COLTMARS"]=2600.00,["MP5"]=1300.00,["COLTSMG633"]=1300.00,["L2A3"]=1280.00,["MP5SD"]=1050.00,["MP10"]=1300.00,["M3A1"]=900.00,["MP5/10"]=1400.00,["UZI"]=1300.00,["AUGA3PARAXS"]=1200.00,["K7"]=1300.00,["AKS74U"]=2400.00,["PPSH-41"]=1600.00,["FALPARASHORTY"]=2000.00,["KRISSVECTOR"]=960.00,["PP-19BIZON"]=1250.00,["MP40"]=1310.00,["X95SMG"]=1300.00,["TOMMYGUN"]=935.00,["RAMA1130"]=1300.00,["BWC9A"]=1300.00,["FIVE-0"]=1200.00,["MK11"]=2800.00,["SKS"]=2500.00,["SL-8"]=2800.00,["DRAGUNOVSVU"]=2700.00,["VSSVINTOREZ"]=2000.00,["MSG90"]=2800.00,["M21"]=2650.00,["BEOWULFTCR"]=1800.00,["SA58SPR"]=2500.00,["SCARSSR"]=3000.00,["COLTLMG"]=2500.00,["M60"]=2800.00,["AUGHBAR"]=3300.00,["MG36"]=2700.00,["RPK12"]=3100.00,["L86LSW"]=3100.00,["RPK"]=2450.00,["HK21E"]=2600.00,["HAMRIAR"]=2600.00,["RPK74"]=3150.00,["MG3KWS"]=2700.00,["M1918A2"]=2800.00,["MGV-176"]=1550.00,["STONER96"]=3000.00,["CHAINSAW"]=3000.00,["MG42"]=2400.00,["INTERVENTION"]=3000.00,["MODEL700"]=2650.00,["AWS"]=2500.00,["BFG50"]=3000.00,["AWM"]=3000.00,["TRG-42"]=3000.00,["MOSINNAGANT"]=3000.00,["DRAGUNOVSVDS"]=2650.00,["M1903"]=3000.00,["K14"]=2800.00,["HECATEII"]=3000.00,["FT300"]=2800.00,["M107"]=2800.00,["STEYRSCOUT"]=3000.00,["WA2000"]=2850.00,["NTW-20"]=2400.00,["M9"]=1300.00,["G17"]=1230.00,["M1911A1"]=830.00,["M17"]=1200.00,["DESERTEAGLEL5"]=1700.00,["G21"]=810.00,["G23"]=1025.00,["M45A1"]=830.00,["G40"]=1350.00,["KG-99"]=1500.00,["G50"]=1250.00,["FIVESEVEN"]=2500.00,["ZIP22"]=1600.00,["GIM1"]=875.00,["HARDBALLER"]=1400.00,["IZHEVSKPB"]=950.00,["MAKAROVPM"]=1030.00,["GB-22"]=1900.00,["DESERTEAGLEXIX"]=1425.00,["AUTOMAGIII"]=1700.00,["GYROJETMARKI"]=25.00,["GSP"]=1800.00,["GRIZZLY"]=1500.00,["M2011"]=1300.00,["ALIEN"]=1300.00,["AF2011-A1"]=1250.00,["G18C"]=1230.00,["93R"]=1200.00,["PP-2000"]=2000.00,["TEC-9"]=1180.00,["MICROUZI"]=2000.00,["ŠKORPIONVZ.61"]=1200.00,["ASMI"]=1260.00,["MP1911"]=830.00,["ARMPISTOL"]=2300.00,["MP412REX"]=1700.00,["MATEBA6"]=1450.00,["1858NEWARMY"]=1000.00,["REDHAWK44"]=1600.00,["JUDGE"]=2000.00,["EXECUTIONER"]=2000.00,["SUPERSHORTY"]=1400.00,["SFG50"]=2000.00,["M79THUMPER"]=900.00,["COILGUN"]=950.00,["SAWEDOFF"]=1300.00,["SAIGA-12U"]=1400.00,["OBREZ"]=1500.00,["SASS308"]=3000.00,["GLOCK17"]=1230.00};
 	return Gunsvelso[Gun];
 end
 
-local BoxDefult = {Enabled = false; Dynamic = false; Color = Color3.fromRGB(255,255,255); Outline = true; OutlineColor = Color3.fromRGB(0,0,0)};
-local TracerDefult = {Enabled = false; Color = Color3.fromRGB(255,255,255); Outline = true; OutlineColor = Color3.fromRGB(0,0,0)};
-local HilightDefult = {Enabled = false; FillColor = Color3.fromRGB(255,255,255); OutlineColor = Color3.fromRGB(0,0,0); OutlineTransparency = 0.5; FillTransparency= 0.5; AllWaysShow = false;};
-local BoneDefult = {Enabled = false; Color = Color3.fromRGB(255, 255, 255); Transparency = 1;};
-local HeadDotDefult = {Enabled = false; Color = Color3.fromRGB(255, 0, 0); Transparency = 0; BorderThickness = 1; Size = 0.5; BalisticsMode = false;}; 
-local TextDefult = {Enabled = false; Color = Color3.fromRGB(255, 255, 255);};
+local BoxDefult = {Enabled = false, Dynamic = false, Color = Color3.fromRGB(255,255,255), Outline = true, OutlineColor = Color3.fromRGB(0,0,0)};
+local TracerDefult = {Enabled = false, Color = Color3.fromRGB(255,255,255), Outline = true, OutlineColor = Color3.fromRGB(0,0,0)};
+local HilightDefult = {Enabled = false, FillColor = Color3.fromRGB(255,255,255), OutlineColor = Color3.fromRGB(0,0,0), OutlineTransparency = 0.5, FillTransparency= 0.5, AllWaysShow = false,};
+local BoneDefult = {Enabled = false, Color = Color3.fromRGB(255, 255, 255), Transparency = 1,};
+local HeadDotDefult = {Enabled = false, Color = Color3.fromRGB(255, 0, 0), Transparency = 0, BorderThickness = 1, Size = 0.5, BalisticsMode = false,};
+local TextDefult = {Enabled = false, Color = Color3.fromRGB(255, 255, 255),};
 
 local esp = {
 	settings = {
-		Enable = false;
-		OnlyShowWhenVisible = false;
-		TeamCheck = false;
-		Box = table.clone(BoxDefult);
-		Tracer = table.clone(TracerDefult);
-		Hilight = table.clone(HilightDefult);
-		Bones = table.clone(BoneDefult);
-		HeadDot = table.clone(HeadDotDefult);
-		ShowGun = table.clone(TextDefult);
-		ShowDistance = table.clone(TextDefult);
-	};
-};
+		Enable = false,
+		OnlyShowWhenVisible = false,
+		TeamCheck = false,
+		Box = table.clone(BoxDefult),
+		Tracer = table.clone(TracerDefult),
+		Hilight = table.clone(HilightDefult),
+		Bones = table.clone(BoneDefult),
+		HeadDot = table.clone(HeadDotDefult),
+		ShowGun = table.clone(TextDefult),
+		ShowDistance = table.clone(TextDefult),
+	},
+}
 
 esp.cache = {
-	__index = esp;
-};
+	__index = esp,
+}
 
 local HyperEscape = {
 	GUI = {
-		GUIButton = true;
-		GUIToggleKey = Enum.KeyCode.RightShift;
-	};
+		GUIButton = true,
+		GUIToggleKey = Enum.KeyCode.RightShift,
+	},
 
 	AimBot = {
-		Enabled = false; 
+		Enabled = false,
 
-		TeamCheck = false;
-		WallCheck = false;
+		TeamCheck = false,
+		WallCheck = false,
 
 		-- NEW
-		StickyAim = false;
-		Prediction = false; 
+		StickyAim = false,
+		Prediction = false,
 
-		UseMouse = false;
-		MouseBind = "MouseButton2";
-		Keybind = Enum.KeyCode.E;  
+		UseMouse = false,
+		MouseBind = "MouseButton2",
+		Keybind = Enum.KeyCode.E,  
 
-		ShowFov = false;
-		Fov = 360;
+		ShowFov = false,
+		Fov = 360,
 
-		Smoothing = 4;
+		Smoothing = 4,
 
-		AimPart = "Head";
+		AimPart = "Head",
 
-		Thickness = 1;
-		FovFillColor = Color3.fromRGB(100,0,100);
-		FovColor = Color3.fromRGB(100,0,100);
-		FovFillTransparency = 1;
-		FovTransparenct = 0;
+		Thickness = 1,
+		FovFillColor = Color3.fromRGB(100,0,100),
+		FovColor = Color3.fromRGB(100,0,100),
+		FovFillTransparency = 1,
+		FovTransparenct = 0,
 
-		IsAimKeyDown = false; 
-		Target = nil;
-		CameraTween = nil;
-	};
+		IsAimKeyDown = false, 
+		Target = nil,
+		CameraTween = nil,
+	},
 
 	SilentAim = {
-		Enabled = false;
-		WallCheck = false;
-		AoutoShoot = false;
+		Enabled = false,
+		WallCheck = false,
+		AoutoShoot = false,
+		
+		Prediction = false,
+		
+		AutoWall = false,
 
-		Prediction = false;
+		HitChance = 50,
 
-		AutoWall = false;
+		AimPart = {"Head"},
+		
+		MaxDistance = false,
+		MaxDistanceNum = 400,
 
-		HitChance = 50;
+		Fov = 360,
+		ShowFov = false,
+		Color = Color3.fromRGB(100, 0 ,20),
+		
+		Target = nil,
 
-		AimPart = {"Head"};
-
-		MaxDistance = false;
-		MaxDistanceNum = 400;
-
-		Fov = 360;
-		ShowFov = false;
-		Color = Color3.fromRGB(100, 0 ,20);
-
-		Target = nil;
-
-		iswindowactive = true;
-
-		CurrentGun = nil;
-		PlayerTarget = nil;
-		PlayerTargetPredict = nil;
-	};
-
+		iswindowactive = true,
+		
+		CurrentGun = nil,
+		PlayerTarget = nil,
+		PlayerTargetPredict = nil,
+	},
+	
 	RageBot = {
-		Enable = false;
-		Keybind = Enum.KeyCode.V;
-
-		HitScan = "Head";
-
-		Prediction = false;
-
-		MaxDistance = true;
-		MaxDistanceNumb = 500;
-
-		HasTarget = false;
-		PlayerTarget = nil;
-		PlayerTargetPredict = nil;
-	};
+		Enable = false,
+		Keybind = Enum.KeyCode.V,
+		
+		HitScan = "Head",
+		
+		Prediction = false,
+		
+		MaxDistance = true,
+		MaxDistanceNumb = 500,
+		
+		HasTarget = false,
+		PlayerTarget = nil,
+		PlayerTargetPredict = nil,
+	},
 
 	Visuals = { -- TODO: Fps boost
-		gameLighting = "ShadowMap";
+		gameLighting = "ShadowMap",
 
-		CustomTimeOfDay = false;
-		TimeOfDay = 24;
+		CustomTimeOfDay = false,
+		TimeOfDay = 24,
 
 		ArmChams = {
-			Enable = false;
+			Enable = false,
 
-			Color = Color3.fromRGB(100, 0, 255);
-			Material = "ForceField"; 
-			trans = 0.5;
-			reflection = 1;
-		};
+			Color = Color3.fromRGB(100, 0, 255),
+			Material = "ForceField", 
+			trans = 0.5,
+			reflection = 1,
+		},
 		GunChams = {
-			Enable = false;
+			Enable = false,
 
-			Color = Color3.fromRGB(100, 0, 255);
-			Material = "ForceField"; 
-			trans = 0.5;
-			reflection = 1;
-		};
+			Color = Color3.fromRGB(100, 0, 255),
+			Material = "ForceField", 
+			trans = 0.5,
+			reflection = 1,
+		},
 
 		Ambience = {
-			Enabled = false;
-			AmbienceInside = Color3.fromRGB(255, 255, 255);
-			AmbienceOutside = Color3.fromRGB(255, 255, 255);
-		};
-	};
-};
+			Enabled = false,
+			AmbienceInside = Color3.fromRGB(255, 255, 255),
+			AmbienceOutside = Color3.fromRGB(255, 255, 255),
+		},
+	},
+}
 local CanDraw = false;
 
 pcall(function()
@@ -158,7 +159,7 @@ pcall(function()
 end)
 
 local DeleteMobLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/syntest123/syntest123/main/Lib1.lua"))();
-local Window = DeleteMobLib:CreateWindow(Enum.KeyCode.RightShift, "DeleteMob");
+local Window = DeleteMobLib:CreateWindow(Enum.KeyCode.RightShift, "pf.lol");
 local UIToggle = Window:CreateToggleButton()
 
 local SilentAimTab = Window:CreateTab("Silent Aim");
@@ -245,8 +246,8 @@ GunChamsSection:CreateSlider("Reflection", 1, 1, 50, 1, function(HjggOF) HyperEs
 
 local SettingsTab = Window:CreateTab("Settings");
 local SettingsInfoSector = SettingsTab:CreateSector("Info", "Left");
-SettingsInfoSector:CreateCoppyText("Made By Liam!");
-SettingsInfoSector:CreateCoppyText("https://discord.gg/EPRdPFq4 - Click Me");
+SettingsInfoSector:CreateCoppyText("Made By m1ckgordon");
+SettingsInfoSector:CreateCoppyText("https://discord.gg/jNRKdtH3 - Click Me");
 
 SettingsTab:CreateConfig("Right");
 
@@ -453,9 +454,9 @@ UserInputService.WindowFocusReleased:Connect(focusReleased);
 
 function esp:Update()
 	if self and self.Character then
-
+		
 		local children = self.Character:GetChildren();
-
+		
 		local head = children[7];
 		local leftArm = children[5];
 		local rightArm = children[4];
@@ -463,11 +464,11 @@ function esp:Update()
 		local rightLeg = children[3];
 		local leftLeg = children[2];
 		local Gun = children[8];
-
-		if tosro ~= nil and head ~= nil then
+		
+		if tosro and head then
 			local screen, onScreen = currentCamera:WorldToScreenPoint(tosro.Position); 
 
-			if screen and onScreen and IsAlive() and esp.settings.Enable then 
+			if  onScreen and IsAlive() and esp.settings.Enable then 
 
 				local frustumHeight = math.tan(math.rad(currentCamera.FieldOfView * 0.5)) * 2 * screen.Z ; -- Thank you mickeydev, Join .gg/lunarity for the best paid script hub for fps games made by known and trusted developers. 
 				local size = currentCamera.ViewportSize.Y / frustumHeight * Vector2.new(5,6);
@@ -475,7 +476,7 @@ function esp:Update()
 				local topTextY = (screen.Y - (size.Y + self.Drawings.DistanceText.TextBounds.Y + 19) / 2);
 				local bottomTextY = (screen.Y + (size.Y + self.Drawings.GunText.TextBounds.Y + 19) / 2);
 
-				if  esp.settings.Box.Enabled and not esp.settings.Box.Dynamic and esp.settings.OnlyShowWhenVisible ~= true or esp.settings.Box.Enabled and not esp.settings.Box.Dynamic then
+				if  esp.settings.Box.Enabled and not esp.settings.Box.Dynamic then
 					self.Drawings.BoxLeft.Size = UDim2.fromOffset(size.X, 1);
 					self.Drawings.BoxRight.Size = UDim2.fromOffset(size.X, 1);
 					self.Drawings.BoxUpper.Size = UDim2.fromOffset(1, size.Y);
@@ -537,9 +538,9 @@ function esp:Update()
 					self.Drawings.OutlineBoxUpper.Visible = false;
 					self.Drawings.OutlineBoxLower.Visible = false;
 				end
-
+				
 				if esp.settings.Box.Enabled and esp.settings.Box.Dynamic and CanDraw and esp.settings.OnlyShowWhenVisible ~= true or esp.settings.Box.Enabled and esp.settings.Box.Dynamic and CanDraw then -- It Is Made But Problem Where Drawings Cant Be Removed :( Gay Ass Niggas
-
+					
 					local points = {};
 					local c = 0;
 					for _,v in pairs(self.Character:GetChildren()) do
@@ -566,21 +567,21 @@ function esp:Update()
 					local Right = GetClosest(points, Vector2.new(currentCamera.ViewportSize.X, screen.Y));
 					local Top = GetClosest(points, Vector2.new(screen.X, 0));
 					local Bottom = GetClosest(points, Vector2.new(screen.X, currentCamera.ViewportSize.Y));
-
+					
 					self.Drawings.OutlineBox.Color = esp.settings.Box.OutlineColor;
 					self.Drawings.OutlineBox.Thickness = 3;
 					self.Drawings.OutlineBox.Transparency = 1;
-
+					
 					self.Drawings.Box.Color = esp.settings.Box.Color;
 					self.Drawings.Box.Thickness = 1;
 					self.Drawings.Box.Transparency = 1;
-
+					
 					if Left ~= nil and Right ~= nil and Top ~= nil and Bottom ~= nil then
 						self.Drawings.OutlineBox.PointA = Vector2.new(Right.X, Top.Y);
 						self.Drawings.OutlineBox.PointB = Vector2.new(Left.X, Top.Y);
 						self.Drawings.OutlineBox.PointC = Vector2.new(Left.X, Bottom.Y);
 						self.Drawings.OutlineBox.PointD = Vector2.new(Right.X, Bottom.Y);
-
+						
 						self.Drawings.Box.PointA = self.Drawings.OutlineBox.PointA;
 						self.Drawings.Box.PointB = self.Drawings.OutlineBox.PointB;
 						self.Drawings.Box.PointC = self.Drawings.OutlineBox.PointC;
@@ -598,7 +599,7 @@ function esp:Update()
 						self.Drawings.Box.Visible = false;
 					end
 				end
-
+				
 				if esp.settings.ShowGun.Enabled and esp.settings.OnlyShowWhenVisible ~= true or esp.settings.Enable and esp.settings.ShowGun.Enabled then
 					if Gun then
 						local GunName = string.gsub(tostring(Gun.Name), "External", "");
@@ -607,13 +608,13 @@ function esp:Update()
 							self.Drawings.GunText.Text = GunName;
 						end
 						self.Drawings.GunText.Position = UDim2.fromOffset(screen.X, bottomTextY);
-
+				
 						self.Drawings.GunText.TextColor3 = esp.settings.ShowGun.Color;
 					end
 				else
 					self.Drawings.GunText.Visible = false;
 				end
-
+				
 				if esp.settings.ShowDistance.Enabled and esp.settings.OnlyShowWhenVisible ~= true or esp.settings.Enable and esp.settings.ShowDistance.Enabled then
 					self.Drawings.DistanceText.Visible = esp.settings.ShowDistance.Enabled;
 					local Distance = math.floor((tosro.Position - currentCamera.CFrame.Position).Magnitude)
@@ -626,7 +627,7 @@ function esp:Update()
 				else
 					self.Drawings.DistanceText.Visible = false;
 				end
-
+				
 				if esp.settings.Tracer.Enabled and esp.settings.OnlyShowWhenVisible ~= true or esp.settings.Tracer.Enabled then
 					-- Tracer
 					local ScreenVec2 = Vector2.new(screen.X, screen.Y + size.Y / 2 + size.Y / 20);
@@ -678,7 +679,7 @@ function esp:Update()
 					self.Drawings.Hilight.Adornee = nil;
 					self.Drawings.Hilight.Enabled = false;
 				end
-
+				
 				if esp.settings.Bones.Enabled and CanDraw and esp.settings.OnlyShowWhenVisible ~= true or esp.settings.Bones.Enabled and CanDraw then -- I Am Not Using Frames For This
 
 					local UpperHead = currentCamera:WorldToViewportPoint(head.Position);
@@ -703,7 +704,7 @@ function esp:Update()
 					self.Drawings.BoneLeftLegUpper.From = Vector2.new(LowerTorso.X, LowerTorso.Y);
 					self.Drawings.BoneRightLeg.From = Vector2.new(RightUpperLeg.X, RightUpperLeg.Y);
 					self.Drawings.BoneRightLegUpper.From = Vector2.new(LowerTorso.X, LowerTorso.Y);
-
+					
 					self.Drawings.BoneHead.To = Vector2.new(UpperTorso.X, UpperTorso.Y);
 					self.Drawings.BoneTorso.To = Vector2.new(LowerTorso.X, LowerTorso.Y);
 					self.Drawings.BoneLeftArm.To = Vector2.new(LeftLowerArm.X, LeftLowerArm.Y);
@@ -714,7 +715,7 @@ function esp:Update()
 					self.Drawings.BoneLeftLegUpper.To = Vector2.new(LeftUpperLeg.X, LeftUpperLeg.Y);
 					self.Drawings.BoneRightLeg.To = Vector2.new(RightLowerLeg.X, RightLowerLeg.Y);
 					self.Drawings.BoneRightLegUpper.To = Vector2.new(RightUpperLeg.X, RightUpperLeg.Y);
-
+					
 					self.Drawings.BoneLeftArm.Visible = esp.settings.Bones.Enabled;
 					self.Drawings.BoneRightArm.Visible = esp.settings.Bones.Enabled;
 					self.Drawings.BoneLeftLeg.Visible = esp.settings.Bones.Enabled;
@@ -725,7 +726,7 @@ function esp:Update()
 					self.Drawings.BoneRightArmUpper.Visible = esp.settings.Bones.Enabled;
 					self.Drawings.BoneLeftLegUpper.Visible = esp.settings.Bones.Enabled;
 					self.Drawings.BoneRightLegUpper.Visible = esp.settings.Bones.Enabled;
-
+					
 					if self.Drawings.BoneLeftArm.Color ~= esp.settings.Bones.Color then
 						self.Drawings.BoneLeftArm.Color = esp.settings.Bones.Color;
 						self.Drawings.BoneRightArm.Color = esp.settings.Bones.Color;
@@ -752,28 +753,28 @@ function esp:Update()
 						self.Drawings.BoneRightLegUpper.Visible = false;
 					end
 				end
-
+				
 				if esp.settings.HeadDot.Enabled and esp.settings.OnlyShowWhenVisible ~= true or esp.settings.HeadDot.Enabled then
 					local HeadScreen = currentCamera:WorldToScreenPoint((esp.settings.HeadDot.BalisticsMode and head.Position - Vector3.new(0, CalucalteBulletDrop(currentCamera.CFrame.Position, head.Position, (GetGun() and GetGun().Name) or "none", workspace.Gravity), 0) or not esp.settings.HeadDot.BalisticsMode and head.Position));
 					local HeadFrustumHeight = math.tan(math.rad(currentCamera.FieldOfView * 0.5)) * 2 * HeadScreen.Z; 
 					local HeadSize = currentCamera.ViewportSize.Y / HeadFrustumHeight * Vector2.new(esp.settings.HeadDot.Size,esp.settings.HeadDot.Size);
 					local HeadPosition = Vector2.new(HeadScreen.X, HeadScreen.Y) - (HeadSize / 2 - Vector2.new(0, HeadSize.Y) / 20);
 					self.Drawings.HeadDot.Visible = esp.settings.HeadDot.Enabled;
-
+					
 					self.Drawings.HeadDot.Size = UDim2.fromOffset(HeadSize.X, HeadSize.Y);
 					self.Drawings.HeadDot.Position = UDim2.fromOffset(HeadPosition.X, HeadPosition.Y);
-
+					
 					self.Drawings.HeadDot.BorderSizePixel = esp.settings.HeadDot.BorderThickness;
 					self.Drawings.HeadDot.BorderColor3 = esp.settings.Box.OutlineColor;
 					self.Drawings.HeadDot.Transparency = esp.settings.HeadDot.Transparency;
-
+					
 					if self.Drawings.HeadDot.BackgroundColor3 ~= esp.settings.HeadDot.Color then
 						self.Drawings.HeadDot.BackgroundColor3 = esp.settings.HeadDot.Color;
 					end
 				else
 					self.Drawings.HeadDot.Visible = false;
 				end
-
+				
 			else
 				self.Drawings.BoxLeft.Visible = false;
 				self.Drawings.BoxRight.Visible = false;
@@ -841,7 +842,7 @@ end
 function esp.Create(Character)
 	local self = setmetatable({}, esp.cache);
 	self.Character = Character;
-
+	
 	if CanDraw then
 		self.Drawings = {
 			OutlineBoxLeft = Instance.new("Frame", Holder);
@@ -853,9 +854,9 @@ function esp.Create(Character)
 			BoxLower = Instance.new("Frame", Holder);
 			BoxLeft = Instance.new("Frame", Holder);
 			BoxRight = Instance.new("Frame", Holder);
-
+			
 			GunText = Instance.new("TextLabel", Holder);
-
+			
 			DistanceText = Instance.new("TextLabel", Holder);
 
 			BoneLeftArm = Drawing.new("Line"), {};
@@ -874,7 +875,7 @@ function esp.Create(Character)
 
 			OutlineBox = Drawing.new("Quad"), {};  -- Some Fucking Reason They Cant Be Removed?????? These Free Executors Are Pissing Me Off.
 			Box = Drawing.new("Quad"), {};
-
+			
 			HeadDot = Instance.new("Frame", Holder);
 
 			Tracer = Instance.new("Frame", Holder);
@@ -892,11 +893,11 @@ function esp.Create(Character)
 			BoxLower = Instance.new("Frame", Holder);
 			BoxLeft = Instance.new("Frame", Holder);
 			BoxRight = Instance.new("Frame", Holder);
-
+			
 			HeadDot = Instance.new("Frame", Holder);
-
+			
 			GunText = Instance.new("TextLabel", Holder);
-
+			
 			DistanceText = Instance.new("TextLabel", Holder);
 
 			Tracer = Instance.new("Frame", Holder);
@@ -904,17 +905,17 @@ function esp.Create(Character)
 			Hilight = Instance.new("Highlight");
 		};
 	end
-
+	
 	self.Drawings.GunText.BackgroundTransparency = 1;
 	self.Drawings.GunText.TextXAlignment = Enum.TextXAlignment.Center;
 	self.Drawings.GunText.Font = 2;
 	self.Drawings.GunText.TextSize = 12;
-
+	
 	self.Drawings.DistanceText.BackgroundTransparency = 1;
 	self.Drawings.DistanceText.TextXAlignment = Enum.TextXAlignment.Center;
 	self.Drawings.DistanceText.Font = 2;
 	self.Drawings.DistanceText.TextSize = 12;
-
+		
 	self.Drawings.OutlineBoxLeft.BorderSizePixel = 1;
 	self.Drawings.OutlineBoxRight.BorderSizePixel = 1;
 	self.Drawings.OutlineBoxUpper.BorderSizePixel = 1;
@@ -924,7 +925,7 @@ function esp.Create(Character)
 	self.Drawings.BoxRight.BorderSizePixel = 0;
 	self.Drawings.BoxUpper.BorderSizePixel = 0;
 	self.Drawings.BoxLower.BorderSizePixel = 0;
-
+	
 	self.Drawings.BoxLeft.Visible = false;
 	self.Drawings.BoxRight.Visible = false;
 	self.Drawings.BoxUpper.Visible = false;
@@ -940,7 +941,7 @@ function esp.Create(Character)
 	self.Drawings.GunText.Visible = false;
 
 	self.Drawings.Tracer.AnchorPoint = Vector2.new(0.5, 0.5);
-
+	
 	self.Connection = RunService.RenderStepped:Connect(function()
 		self:Update();
 	end)
@@ -965,7 +966,7 @@ function esp:Remove()
 		self.Drawings.OutlineBox:Remove();
 		self.Drawings.Box:Remove();	
 	end
-
+	
 	for _,Drawings in next, self.Drawings do
 		if typeof(Drawings) ~= "table" then
 			Drawings:Remove();
@@ -980,14 +981,11 @@ local loop = RunService.RenderStepped:Connect(function()
 		for i,Character in game.Workspace.Players:GetDescendants() do 
 			if Character.ClassName == "Model" then
 
-				local children = Character:GetChildren();
-
-				local Torso = children[6];
+				local Torso = Character:GetChildren()[6];
 
 				if Torso and GetTeam(Torso) ~= localTeam() then 
-					local self = esp.cache[Character];
-
-					if not self then
+					
+					if not esp.cache[Character] then
 						esp.Create(Character);
 					end
 
@@ -1009,8 +1007,8 @@ local function GetTarget()
 	for i,Character in game.Workspace.Players:GetDescendants() do
 		if Character.ClassName == "Model" then
 
-			local AimP4art = nil;
-
+			local AimPart = nil;
+			
 			local children = Character:GetChildren();
 
 			local Head = children[7];
@@ -1166,25 +1164,25 @@ RunService.RenderStepped:Connect(function()
 	end	
 
 	if HyperEscape.SilentAim.Enabled and IsAlive() then
-
+		
 		HyperEscape.SilentAim.CurrentGun = GetGun();
 
 		local SmallestMagnitude = math.huge;
 		HyperEscape.SilentAim.PlayerTarget = nil;
 		for i,Character in game.Workspace.Players:GetDescendants() do
 			if Character.ClassName == "Model" then
-
+				
 				local Penetratrion;
 				if HyperEscape.SilentAim.CurrentGun and not HyperEscape.SilentAim.CurrentGun:FindFirstChild("Tip") then
 					Penetratrion = GetGunBulletPen(string.gsub(string.gsub(tostring(HyperEscape.SilentAim.CurrentGun.Name), "Main", ""), " ", ""));	
 				else
 					Penetratrion = math.huge;
 				end
-
+				
 				if Penetratrion == nil then
 					Penetratrion = 0;
 				end
-
+				
 				local AimPart = nil;
 
 				local children = Character:GetChildren();
@@ -1200,15 +1198,15 @@ RunService.RenderStepped:Connect(function()
 					if GetTeam(Torso) ~= localTeam() then 
 						for i,HitParts in next, HyperEscape.SilentAim.AimPart do
 							if  HitParts == "Torso" then
-								--local TorsoScreenPos, TorsoOnScreen = currentCamera:WorldToViewportPoint(Torso.Position);		
-								--local TorsoPos = Vector2.new(TorsoScreenPos.X, TorsoScreenPos.Y);
-								--local TorsoMagnitude = (TorsoPos - mouseLocation(UIS)).Magnitude;
-								--if TorsoScreenPos and TorsoMagnitude < SmallestMagnitude and TorsoMagnitude < HyperEscape.SilentAim.Fov and CalculatePenetration(Torso, HyperEscape.SilentAim.AutoWall ,Penetratrion) then
-								--	if HyperEscape.SilentAim.WallCheck ~= true or IsVisible(Torso.Position, {Torso.Parent, localPlayer.Character, game.Workspace.Ignore, currentCamera}) == true then
-								--		SmallestMagnitude = TorsoMagnitude;
-								--		Target = Torso;
-								--	end
-								--end
+								local TorsoScreenPos, TorsoOnScreen = currentCamera:WorldToViewportPoint(Torso.Position);		
+								local TorsoPos = Vector2.new(TorsoScreenPos.X, TorsoScreenPos.Y);
+								local TorsoMagnitude = (TorsoPos - mouseLocation(UIS)).Magnitude;
+								if TorsoScreenPos and TorsoMagnitude < SmallestMagnitude and TorsoMagnitude < HyperEscape.SilentAim.Fov and CalculatePenetration(Torso, HyperEscape.SilentAim.AutoWall ,Penetratrion) then
+									if HyperEscape.SilentAim.WallCheck ~= true or IsVisible(Torso.Position, {Torso.Parent, localPlayer.Character, game.Workspace.Ignore, currentCamera}) == true then
+										SmallestMagnitude = TorsoMagnitude;
+										HyperEscape.SilentAim.PlayerTarget = Torso;
+									end
+								end
 							elseif HitParts == "Head" then
 								local HeadScreenPos, HeadOnScreen = currentCamera:WorldToViewportPoint(Head.Position);
 								local HeadPos = Vector2.new(HeadScreenPos.X, HeadScreenPos.Y);
@@ -1225,11 +1223,11 @@ RunService.RenderStepped:Connect(function()
 				end
 			end
 		end
-
+		
 		pcall(function()
 			if not HyperEscape.SilentAim.CurrentGun:FindFirstChild("Tip") then
 				if HyperEscape.SilentAim.PlayerTarget and HyperEscape.SilentAim.PlayerTargetPredict and GetGun() and math.random(0, 100) <= HyperEscape.SilentAim.HitChance then
-
+					
 					for _,v in pairs(GetDirChange()) do
 
 						v.Position = v.CFrame.Position;
@@ -1239,7 +1237,7 @@ RunService.RenderStepped:Connect(function()
 						if weld then
 							weld:Destroy();
 						end
-
+						
 						local Target = HyperEscape.SilentAim.PlayerTargetPredict;
 						local TargetPos = Target - Vector3.new(0, CalucalteBulletDrop(v.Position, Target, GetGun().Name, workspace.Gravity), 0)
 						local x,y,z = CFrame.new(v.Position, TargetPos):ToEulerAnglesYXZ();
@@ -1277,7 +1275,7 @@ end)
 
 RunService.RenderStepped:Connect(function()
 	if HyperEscape.RageBot.Enable and IsAlive() then
-
+		
 		local CamGun = GetGun();
 
 		local Closest = math.huge;
@@ -1314,7 +1312,7 @@ RunService.RenderStepped:Connect(function()
 				end
 			end
 		end
-
+		
 		pcall(function()
 			if not CamGun:FindFirstChild("Tip") then 
 				if HyperEscape.RageBot.PlayerTarget and HyperEscape.RageBot.PlayerTarget.Position and HyperEscape.RageBot.PlayerTargetPredict and CamGun then
@@ -1386,14 +1384,14 @@ coroutine.wrap(function()
 	local SilentAim = HyperEscape.SilentAim; -- Idk fuck off
 	local LastPlayer = "nil";
 	local Abs = math.abs;
-
+	
 	local PredictionVector = Vector3.new();
 	local OldPosition = Vector3.new();
 	local PredictionAmount = 1;
-
+	
 	local LastTick = tick();
-
-
+	
+	
 	while RunService.RenderStepped:Wait() do
 		if SilentAim.Enabled and SilentAim.PlayerTarget and SilentAim.PlayerTarget.Position and GetGun() then
 			if SilentAim.Prediction == true then
@@ -1418,11 +1416,11 @@ coroutine.wrap(function()
 				local TicksTaken = LastTick - tick();
 				local DistanceMoved = (OldPosition - SilentAim.PlayerTarget.Position).Magnitude;
 				local Speed = DistanceMoved / TicksTaken;
-
+				
 				PredictionAmount = (Speed * BulletTime) * DistanceMoved;
 
 				--
-
+				
 				local dx = SilentAim.PlayerTarget.Position.X - OldPosition.X;
 				local dy = SilentAim.PlayerTarget.Position.Y - OldPosition.Y;
 				local dz = SilentAim.PlayerTarget.Position.Z - OldPosition.Z;
@@ -1432,21 +1430,21 @@ coroutine.wrap(function()
 				local vx = dx/d * PredictionAmount;
 				local vy = dy/d * PredictionAmount;
 				local vz = dz/d * PredictionAmount;
-
+				
 				local mvx = vx
-
+				
 				PredictionVector = Vector3.new(vx, vy, vz);
 
 				LastTick = tick();
 				OldPosition = SilentAim.PlayerTarget.Position
-
+				
 				LastPlayer = SilentAim.PlayerTarget.Name
-
+				
 				SilentAim.PlayerTargetPredict = SilentAim.PlayerTarget.Position - (PredictionVector or Vector3.zero)
 			else
 				SilentAim.PlayerTargetPredict = SilentAim.PlayerTarget.Position
 			end
-
+			
 		end
 	end
 end)()
@@ -1519,3 +1517,28 @@ coroutine.wrap(function()
 		end
 	end
 end)()
+
+--[[
+Notes:
+Wepon Muz:
+
+local Valos = 0;
+local Name =  string.gsub(game.Players.LocalPlayer.PlayerGui.MenuScreenGui.Pages.PageLoadoutMenu.DisplayWeaponStats.TitleWeaponName.TextFrame.Text, " ", "");
+for i,v in game.Players.LocalPlayer.PlayerGui.MenuScreenGui.Pages.PageLoadoutMenu.DisplayAdvancedStats.Container:GetDescendants() do
+	if v.ClassName == "TextLabel" and v.Text == "MUZZLE VELOCITY" then 
+		Valos = string.gsub(string.gsub(v.Parent.TextFrameValue.Text, "studs/s", ""), " ", "");
+	end
+end
+setclipboard("["" .. Name .. ""]" .. "=" .. Valos .. ",")
+
+Wepon Pen;
+
+local Pen = 0;
+local Name =  string.gsub(game.Players.LocalPlayer.PlayerGui.MenuScreenGui.Pages.PageLoadoutMenu.DisplayWeaponStats.TitleWeaponName.TextFrame.Text, " ", "");
+for i,v in game.Players.LocalPlayer.PlayerGui.MenuScreenGui.Pages.PageLoadoutMenu.DisplayAdvancedStats.Container:GetDescendants() do
+	if v.ClassName == "TextLabel" and v.Text == "PENETRATION DEPTH" then 
+		Pen = string.gsub(string.gsub(v.Parent.TextFrameValue.Text, "studs", ""), " ", "");
+	end
+end
+setclipboard("["" .. Name .. ""]" .. "=" .. Pen .. ",")
+]]
