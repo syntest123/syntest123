@@ -1398,7 +1398,7 @@ else
 
 	local DeleteMobLib = library();
 
-	local Window = DeleteMobLib:CreateWindow(HyperEscape.GUI.GUIToggleKey, "pf.lol");
+	local Window = DeleteMobLib:CreateWindow(HyperEscape.GUI.GUIToggleKey, "DeleteMob");
 	local UIToggle = Window:CreateToggleButton()
 
 	local AimBotTab = Window:CreateTab("Aim Bot");
