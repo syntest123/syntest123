@@ -1,5 +1,5 @@
 if game.GameId == 113491250 then
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/syntest123/syntest123/main/ragebot.lua", true))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/syntest123/syntest123/main/MainCode.lua", true))()
 else
 	local HyperEscape = { -- fuck Off I Like It, Even Tho It Is Anoying.
 		GUI = {
@@ -1450,8 +1450,8 @@ else
 
 	local SettingsTab = Window:CreateTab("Settings");
 	local SettingsInfoSector = SettingsTab:CreateSector("Info", "Left");
-	SettingsInfoSector:CreateCoppyText("Made By Liam");
-	SettingsInfoSector:CreateCoppyText("https://discord.gg/b6aBJbm6fN - Click Me");
+	SettingsInfoSector:CreateCoppyText("Made By m1ckgordon");
+	SettingsInfoSector:CreateCoppyText("https://discord.gg/jNRKdtH3 - Click Me");
 
 	SettingsTab:CreateConfig("Right");
 
